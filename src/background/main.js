@@ -6,8 +6,8 @@ import utils from "utils"
 
 const script = document.createElement("script");
 script.src = "https://sdk.scdn.co/spotify-player.js";
-script.async = true;
 
+script.async = true;
 document.body.appendChild(script);
 
 window.onSpotifyWebPlaybackSDKReady = () => {
@@ -324,6 +324,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
         switch (command) {
             case "toggle-feature-previous":
                 player && player.previousTrack();
+                console.log('prev');
                 break;
         
             case "toggle-feature-play":
@@ -332,6 +333,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
             
             case "toggle-feature-next": 
                 player && player.nextTrack();
+                console.log('next');
                 break
             
             case "toggle-feature-save": 

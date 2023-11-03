@@ -1,9 +1,14 @@
-import('../vendor/spotify-player')
+//import('../vendor/spotify-player')
 import message from "./message.coffee"
 import $ from "jquery"
 import utils from "utils"
 // import debounce from 'lodash/debounce'
 
+const script = document.createElement("script");
+script.src = "https://sdk.scdn.co/spotify-player.js";
+script.async = true;
+
+document.body.appendChild(script);
 
 window.onSpotifyWebPlaybackSDKReady = () => {
     let player;

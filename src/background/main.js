@@ -13,7 +13,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
         if (player) return player.connect();
         
         player = new Spotify.Player({
-            name: 'Spotify on Chrome',
+            name: 'Spotipi',
             getOAuthToken: cb => { 
                 if(spotifyAccessToken)
                     cb(spotifyAccessToken); 
@@ -338,7 +338,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
                             message: `Great, "${player.currentState.track_window.current_track.name}" has been saved in your library.`,
                             // contextMessage: "This track has been saved in your library.",
                             iconUrl: "images/256.png",
-                            title: 'Spotify on Chrome',
+                            title: 'Spotipi',
                             silent: true,
                             type: 'basic'
                         })
